@@ -55,9 +55,15 @@ numbers.forEach(number => {
     });
 });
 
+const chars = ["+", "-", "*", "/"]
+
 let currentOperator;
 operators.forEach(operator => {
     operator.addEventListener("click", () => {
+        if (chars.some(char => display.textContent.includes(char))){
+            calculate();
+
+        }
         display.textContent += " " + operator.textContent + " ";
         currentOperator = operator.textContent;
     })
