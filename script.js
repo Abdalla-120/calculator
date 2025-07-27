@@ -24,10 +24,6 @@ const calculate = function(){
     display.textContent = operate(firstNumber, currentOperator, secondNumber);
 };
 
-let number1;
-let operator;
-let number2;
-
 const operate = function(n1, operator, n2) {
     let result;
     if (operator === "+") {
@@ -66,6 +62,4 @@ operators.forEach(operator => {
 
 equal.addEventListener("click", () => calculate());
 
-clear.addEventListener("click", () => {
-    display.textContent = "";
-})
+clear.addEventListener("click", () => display.textContent = "");
